@@ -1,1 +1,0 @@
-My left side and right side of my brain are fighting for control. And neither are winning
