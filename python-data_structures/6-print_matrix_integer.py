@@ -6,5 +6,5 @@ def print_matrix_integer(matrix=[[]]):
             if element != last_element:
                 print("{:d} ".format(element), end='')
             else:
-                print("{:d}".format(element), end='$')
+                print("{:d}".format(element), end='')
         print()
