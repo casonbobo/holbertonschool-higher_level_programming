@@ -41,12 +41,13 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print("")
-        else:
-            for y in range(0, self.__postion[1]):
+            return
+        
+        for y in range(0, self.__postion[1]):
+            print("")
+        for row in range(self.__size):
+            for x in range(0, self.__position[0]):
                 print("")
-            for row in range(self.__size):
-                for x in range(0, self.__position[0]):
-                        print("")
-                for each in range(self.__size):
-                    print("#", end="")
-                print("")
+            for each in range(self.__size):
+                print("#", end="")
+            print("")
