@@ -36,7 +36,7 @@ class Square:
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.position = value
+        self.__position = value
 
     def my_print(self):
         if self.__size == 0:
@@ -45,8 +45,8 @@ class Square:
             for y in range(0, self.__postion[1]):
                 print("")
             for row in range(self.__size):
-                for each in range(self.__size):
-                    for x in range(0, self.__position[0]):
+                for x in range(0, self.__position[0]):
                         print("")
+                for each in range(self.__size):
                     print("#", end="")
                 print("")
