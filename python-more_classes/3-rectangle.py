@@ -52,3 +52,6 @@ class Rectangle:
             if column < self.height - 1:
                 string += '\n'
         return string
+
+    def __ref__(self):
+        return("Rectangle(" + str(self.__width) + ', ' + str(self.__height) + ')')
