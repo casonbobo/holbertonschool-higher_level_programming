@@ -43,9 +43,10 @@ class Rectangle:
         return (self.height * 2) + (self.width * 2)
 
     def print(self):
+        string=""
         if self.height == 0 or self.width == 0:
-            return ""
+            return string
         for column in range(self.height):
             for row in range(self.width):
-                print("#")
-            print("")
+                string += '#'
+            string += '/n'
