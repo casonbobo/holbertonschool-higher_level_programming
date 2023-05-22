@@ -46,8 +46,9 @@ class Rectangle:
         string = ""
         if self.height == 0 or self.width == 0:
             return string
-        for column in range(self.height - 1):
+        for column in range(self.height):
             for row in range(self.width):
                 string += '#'
-            string += '\n'
+            if column < self.height - 1:
+                string += '\n'
         return string
