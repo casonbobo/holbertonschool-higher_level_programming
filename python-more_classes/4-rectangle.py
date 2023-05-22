@@ -53,5 +53,5 @@ class Rectangle:
                 string += '\n'
         return string
 
-    def __ref__(self):
+    def __repr__(self):
         return("Rectangle(" + str(self.__width) + ', ' + str(self.__height) + ')')
