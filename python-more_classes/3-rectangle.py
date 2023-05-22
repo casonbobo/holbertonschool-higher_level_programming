@@ -49,5 +49,5 @@ class Rectangle:
         for column in range(self.height):
             for row in range(self.width):
                 string += '#'
-            string += '/n'
+            string += '\n'
         return string
