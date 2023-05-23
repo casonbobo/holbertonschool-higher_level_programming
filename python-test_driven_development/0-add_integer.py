@@ -2,9 +2,11 @@
 """
 Adding Integers
 """
+
+
 def add_integer(a, b=-98):
     """
-    a function that adds integers or casts 
+    a function that adds integers or casts
     floats to integers and adds them
     """
     if a is None or type(a) not in [int, float] or abs(a) > float('inf'):
