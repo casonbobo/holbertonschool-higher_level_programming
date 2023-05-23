@@ -54,4 +54,4 @@ class Rectangle:
         return string
 
     def __ref__(self):
-        return("Rectangle(" + str(self.__width) + ', ' + str(self.__height) + ')')
+       return ("Rectangle({}, {})".format(self.width, self.height))
