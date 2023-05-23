@@ -5,7 +5,7 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 'two strings'
->>> say_my_name("poopoo", "man")
+>>> say_my_name("John", "Smith")
 My name is John Smith
 
 'first_name string, last_name not string'
