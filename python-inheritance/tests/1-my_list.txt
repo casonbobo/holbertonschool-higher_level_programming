@@ -19,11 +19,11 @@
 
 'A list of strings'
 >>> my_list = MyList()
->>> my_list.append('I')
->>> my_list.append('Smell')
->>> my_list.append('Bad')
+>>> my_list.append('CCC')
+>>> my_list.append('BBB')
+>>> my_list.append('AAA')
 >>> my_list.print_sorted()
-['I', 'Smell', 'Bad']
+['AAA', 'BBB', 'CCC']
 
 'new list'
 >>> my_list = MyList()
