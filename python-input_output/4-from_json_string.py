@@ -3,6 +3,6 @@
 import json
 
 
-def to_json_string(my_obj):
+def from_json_string(my_str):
     """this is a function to json"""
-    return (json.dumps(my_obj))
+    return (json.loads(my_str))
