@@ -5,7 +5,7 @@ Rectangle. Building from the base class
 from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """This is a rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         if type(width) is not int or type(height) is not int:
@@ -16,10 +16,6 @@ class Rectangle:
         self.__height = height
         self.__x = x
         self.__y = y
-
-    def area(self):
-        """Area function for rectangle"""
-        return(self.__height * self.__height)
     
     @property
     def width(self):
@@ -68,4 +64,8 @@ class Rectangle:
         if value < 0:
                 raise ValueError("size must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Area function for rectangle"""
+        return(self.__height * self.__height)
 
