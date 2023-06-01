@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import base
 """
 Rectangle. Building from the base class
 """
+from models.base import Base
 
 
 class Rectangle:
