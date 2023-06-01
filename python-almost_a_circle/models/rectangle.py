@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-Rectangle
+Rectangle. Building from the base class
 """
 
 class Rectangle:
-    """ is a rectangle"""
+    """This is a rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         if type(width) is not int or type(height) is not int:
             raise TypeError("size must be an integer")
@@ -16,6 +16,7 @@ class Rectangle:
         self.__y = y
 
     def area(self):
+        """Area function for rectangle"""
         return(self.__height * self.__height)
     
     @property

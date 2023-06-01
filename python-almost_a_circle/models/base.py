@@ -2,7 +2,7 @@
 """This class will be the base of all other classes in this project"""
 class Base:
     __nb_objects = 0  # private class attribute
-
+    """This is the base class"""
     def __init__(self, id=None):
         if id is not None:
             self.id = id  # assign id if provided
