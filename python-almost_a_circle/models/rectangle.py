@@ -68,6 +68,7 @@ class Rectangle(Base):
         return(self.__height * self.__width)
 
     def display(self):
+            """Function to display the rectangle"""
             string = ""
             if self.height == 0 or self.width == 0:
                 return string
