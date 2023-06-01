@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+import base
 """
 Rectangle. Building from the base class
 """
+
 
 class Rectangle:
     """This is a rectangle"""
