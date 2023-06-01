@@ -7,6 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """This is a rectangle"""
+    print_symbol = '#'
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -65,3 +66,18 @@ class Rectangle(Base):
     def area(self):
         """Area function for rectangle"""
         return(self.__height * self.__width)
+    
+    def __str__(self):
+            string = ""
+            if self.height == 0 or self.width == 0:
+                return string
+            for column in range(self.height):
+                for row in range(self.width):
+                    string += str(self.print_symbol)
+                if column < self.height - 1:
+                    string += '\n'
+            return string
+    
+    def __str__(self):
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+                .format(self.id, self.x, self.y, self.width, self.height))
