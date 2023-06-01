@@ -66,8 +66,8 @@ class Rectangle(Base):
     def area(self):
         """Area function for rectangle"""
         return(self.__height * self.__width)
-    
-    def __str__(self):
+
+    def display(self):
             string = ""
             if self.height == 0 or self.width == 0:
                 return string
@@ -76,8 +76,8 @@ class Rectangle(Base):
                     string += str(self.print_symbol)
                 if column < self.height - 1:
                     string += '\n'
-            return string
-    
+            print(string)
+
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
