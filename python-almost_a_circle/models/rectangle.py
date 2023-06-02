@@ -8,7 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     """This is a rectangle"""
     print_symbol = '#'
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -69,17 +69,28 @@ class Rectangle(Base):
         return(self.__height * self.__width)
 
     def display(self):
-            """Function to display the rectangle"""
-            string = ""
-            if self.height == 0 or self.width == 0:
-                return string
-            for column in range(self.height):
-                for row in range(self.width):
-                    string += str(self.print_symbol)
-                if column < self.height - 1:
-                    string += '\n'
-            print(string)
+        """Function to display the rectangle"""
+        print("\n" * self.y, end='')  
+        for row in range(self.height):
+            print(" " * self.x, end='')
+            for col in range(self.width):
+                print("#", end='')
+            print()
 
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}"
                 .format(self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args, **kwargs):
+            """\_:|_/"""
+            if args:
+                if len(args) >= 1:
+                    self.id = args[0]
+                if len(args) >= 2:
+                    self.__width = args[1]
+                if len(args) >= 3:
+                    self.__height = args[2]
+                if len(args) >= 4:
+                    self.__x = args[3]
+                if len(args) >= 5:
+                    self.__y = args[4]
