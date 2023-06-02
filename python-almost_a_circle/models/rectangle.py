@@ -70,7 +70,7 @@ class Rectangle(Base):
 
     def display(self):
         """Function to display the rectangle"""
-        print("\n" * self.y, end='')  
+        print("\n" * self.y, end='')
         for row in range(self.height):
             print(" " * self.x, end='')
             for col in range(self.width):
@@ -94,3 +94,5 @@ class Rectangle(Base):
                     self.__x = args[3]
                 if len(args) >= 5:
                     self.__y = args[4]
+            for key, value in kwargs.items():
+                setattr(self, key, value)
