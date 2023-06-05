@@ -12,3 +12,14 @@ class Base:
         else:
             Base.__nb_objects += 1  # if id is not provided
             self.id = Base.__nb_objects
+
+    @classmethod
+    def load_from_file(cls):
+        """Class method that Returns: A list of instances."""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                list_dicts = cls.from_json_string(file.read())
+                return [cls.create(**dictionary) for dictionary in list_dicts]
+        except FileNotFoundError:
+            return []

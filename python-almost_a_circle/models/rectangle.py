@@ -83,11 +83,12 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """\_:|_/"""
         attribute = ["id", "width", "height", "x", "y"]
-        if args:
+        if args and len(args) > 0:
             for attr, value in zip(attribute, args):
                 setattr(self, attr, value)
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """returns the rectangle in a dictionary form"""
