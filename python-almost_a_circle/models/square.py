@@ -24,25 +24,14 @@ class Square(Rectangle):
                 .format(self.id, self.x, self.y, self.width or self.height))
 
     def update(self, *args, **kwargs):
-        """\_:|_/"""
-        attribute = ["id", "size", "x", "y"]
-        if args and len(args) > 0:
-            for index, value in enumerate(args):
-                if index < len(attribute):
-                    if attribute[index] == "size":
-                        self.width = value
-                        self.height = value
-                    else:
-                        setattr(self, attribute[index], value)
-        else:
-            for key, value in kwargs.items():
-                if hasattr(self, key):
-                    if key == "size":
-                        self.width = value
-                        self.height = value
-                    else:
-                        setattr(self, key, value)
-        
+        """i dunno. Documentaion or something"""
+        if args:
+            attribute = ['id', 'size', 'x', 'y']
+            for i, arg in enumerate(args):
+                setattr(self, attribute[i], arg)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
     def to_dictionary(self):
         """returns the square in a dictionary form"""
         return {
