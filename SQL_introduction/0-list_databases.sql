@@ -1,2 +1,2 @@
-/*This is a comment*/
-SHOW DATABSES;
+--This is a comment
+SHOW DATABASES;
