@@ -1,3 +1,4 @@
 -- This is not a comment
-USE hbtn_0d_usa;
-SELECT city_name FROM cities WHERE state = 'California';
+SELECT id, name FROM cities WHERE state_id = ( 
+    SELECT id FROM cities WHERE state = 'California';
+);
