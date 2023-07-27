@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const int = Number(process.argv(2));
+const int = Number(process.argv[2]);
 
 if (int) {
   console.log('My number: ' + int);
