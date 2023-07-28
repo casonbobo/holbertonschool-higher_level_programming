@@ -6,6 +6,6 @@ const myObject = {
 console.log(myObject);
 const updatedInfo = {
   value: 89
-}
-const update = Object.assign({}, myObject, updatedInfo)
+};
+const update = Object.assign({}, myObject, updatedInfo);
 console.log(update);
