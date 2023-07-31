@@ -1,11 +1,10 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0) {
-      process.exit(0);
+    if (w >= 1 && h >= 1) {
+      this.width = w;
+      this.height = h;
     }
-    this.width = w;
-    this.height = h;
   }
 
   print () {
@@ -23,7 +22,7 @@ class Rectangle {
   rotate () {
     [this.width, this.height] = [this.height, this.width];
   }
-  
+
   double () {
     this.height = this.height * 2;
     this.width = this.width * 2;
