@@ -8,7 +8,7 @@ function printFileContents (filePath) {
     if (err) {
       console.error('Error:', err);
     } else {
-      console.write(content);
+      console.log(content);
     }
   });
 }
