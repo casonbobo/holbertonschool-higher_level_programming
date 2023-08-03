@@ -2,7 +2,7 @@
 const request = require('request');
 const url = process.argv[2];
 
-  request(url, 'utf8', function (err, data) {
+  request(url, 'utf8', function (err, response, data) {
     if (err) {
       console.error(err);
     } else {
