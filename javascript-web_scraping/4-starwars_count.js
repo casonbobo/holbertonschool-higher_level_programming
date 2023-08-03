@@ -11,7 +11,7 @@ request(url, function (err, response, data) {
     for (const movie in json) {
       const characters = json[movie].characters
       for (const person in characters) {
-        if (characters[person].include('/18/')){
+        if (characters[person].includes('/18/')){
           countWedge += 1;
         }
       }
