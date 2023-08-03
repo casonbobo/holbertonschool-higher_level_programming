@@ -7,7 +7,7 @@ request(website, function (err, response, data) {
   if (err) {
     console.error(err);
   } else {
-    const json = JSON.parse(body);
+    const json = JSON.parse(data);
     console.log(json.title);
   }
 });
