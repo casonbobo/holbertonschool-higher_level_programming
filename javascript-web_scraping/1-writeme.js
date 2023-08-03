@@ -12,4 +12,3 @@ function printFileContents (filePath) {
     }
   });
 }
-printFileContents(filePath);
