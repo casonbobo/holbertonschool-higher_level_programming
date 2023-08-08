@@ -9,9 +9,9 @@ request(url, function (err, response, data) {
     const json = JSON.parse(data).results;
     let countWedge = 0;
     for (const movie in json) {
-      const characters = json[movie].characters
+      const characters = json[movie].characters;
       for (const person in characters) {
-        if (characters[person].includes('/18/')){
+        if (characters[person].includes('/18/')) {
           countWedge += 1;
         }
       }
